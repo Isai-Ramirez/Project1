@@ -1,0 +1,25 @@
+body
+{
+    background-image: url("../images/pw_maze_white.png");
+}
+
+.nav-wrapper
+{
+    background-color: #3661A2;
+}
+
+ul li a
+{
+    font-size: 20px;
+    padding-left: 7px;
+}
+
+.material-icons
+{
+    padding-top: 20px;
+}
+
+.brand-logo .left
+{
+    padding-left: 20px;
+}
