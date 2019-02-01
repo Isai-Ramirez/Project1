@@ -11,3 +11,31 @@ var config = {
   firebase.initializeApp(config);
 
   var database = firebase.database();
+
+  $("#submit-button").on("click", function(event) {
+    event.preventDefault();
+
+   var search = $("#search")
+   console.log(this);
+   console.log("Submit");
+
+   var newSearch = {
+       info: search,
+   };
+
+   database.ref().push(newSearch);
+
+   console.log(newSearch.info);
+
+   $("#search").val("");
+
+  });
+
+  database.ref().on("child_added", function(childSnapshot) {
+      console.log(childSnapshot.val());
+
+      var search = childSnapshot.val().info;
+
+      console.log(search);
+
+  });
