@@ -38,3 +38,10 @@ var config = {
 
 
   });
+
+  $("#facebook").on("click", function(){
+      var datestamp = Date.now();
+
+      database.ref().push(datestamp);
+      database.ref().push(this.id)
+  });
