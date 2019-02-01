@@ -12,6 +12,7 @@ var config = {
 
   var database = firebase.database();
 
+  //on click function on search button
   $("#submit-button").on("click", function(event) {
     event.preventDefault();
 
@@ -19,18 +20,12 @@ var config = {
    console.log(search);
    console.log("Submit");
 
-  // var newSearch = {
-   //    info: search,
-   //};
-
+  
    database.ref().push(search);
 
-   //console.log(newSearch.info);
-
-  // $("#search").val("");
 
   });
-
+  // storing child info
   database.ref().on("child_added", function(childSnapshot) {
       console.log(childSnapshot.val());
 
@@ -38,10 +33,21 @@ var config = {
 
 
   });
-
+// monitoring clicks and time clicked for facebook link
   $("#facebook").on("click", function(){
       var datestamp = Date.now();
 
       database.ref().push(datestamp);
       database.ref().push(this.id)
   });
+
+  // monitoring clicks and time clicked on menu items
+  $("a").on("click", function()
+{
+    var datestamp = Date.now();
+    database.ref().push(datestamp);
+
+    var content = this.innerText;
+    database.ref().push(content);
+});
+
