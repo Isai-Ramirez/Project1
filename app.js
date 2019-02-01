@@ -15,27 +15,26 @@ var config = {
   $("#submit-button").on("click", function(event) {
     event.preventDefault();
 
-   var search = $("#search")
-   console.log(this);
+   var search = $("#search").val().trim();
+   console.log(search);
    console.log("Submit");
 
-   var newSearch = {
-       info: search,
-   };
+  // var newSearch = {
+   //    info: search,
+   //};
 
-   database.ref().push(newSearch);
+   database.ref().push(search);
 
-   console.log(newSearch.info);
+   //console.log(newSearch.info);
 
-   $("#search").val("");
+  // $("#search").val("");
 
   });
 
   database.ref().on("child_added", function(childSnapshot) {
       console.log(childSnapshot.val());
 
-      var search = childSnapshot.val().info;
+      var search = childSnapshot.val();
 
-      console.log(search);
 
   });
