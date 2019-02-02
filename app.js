@@ -17,10 +17,11 @@ var config = {
     event.preventDefault();
 
    var search = $("#search").val().trim();
+   var datestamp = Date.now();
    console.log(search);
    console.log("Submit");
 
-  
+   database.ref().push(datestamp);
    database.ref().push(search);
 
 
