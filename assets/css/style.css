@@ -52,8 +52,7 @@ i.left
 
 .white-text
 {
-    width: 490px;
-   
+    width: 490px;  
 }
 
 .input-field
@@ -70,7 +69,12 @@ i.left
 }
 
 
+#share_button {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 768px){
 
 
-
-
+}
