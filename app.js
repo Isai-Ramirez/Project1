@@ -7,47 +7,49 @@ var config = {
     projectId: "digital-footprint-1999d",
     storageBucket: "",
     messagingSenderId: "820087665716"
-  };
-  firebase.initializeApp(config);
+};
+firebase.initializeApp(config);
 
-  var database = firebase.database();
+var database = firebase.database();
 
-  //on click function on search button
-  $("#submit-button").on("click", function(event) {
+//on click function on search button
+$("#submit-button").on("click", function (event) {
     event.preventDefault();
 
-   var search = $("#search").val().trim();
-   console.log(search);
-   console.log("Submit");
-
-  
-   database.ref().push(search);
+    var search = $("#search").val().trim();
+    console.log(search);
+    console.log("Submit");
 
 
-  });
-  // storing child info
-  database.ref().on("child_added", function(childSnapshot) {
-      console.log(childSnapshot.val());
-
-      var search = childSnapshot.val();
+    database.ref().push(search);
 
 
-  });
+});
+// storing child info
+database.ref().on("child_added", function (childSnapshot) {
+    console.log(childSnapshot.val());
+
+    var search = childSnapshot.val();
+
+
+});
 // monitoring clicks and time clicked for facebook link
-  $("#facebook").on("click", function(){
-      var datestamp = Date.now();
+$("#facebook").on("click", function () {
+    var datestamp = Date.now();
 
-      database.ref().push(datestamp);
-      database.ref().push(this.id)
-  });
+    database.ref().push(datestamp);
+    database.ref().push(this.id)
+});
 
-  // monitoring clicks and time clicked on menu items
-  $("a").on("click", function()
-{
+// monitoring clicks and time clicked on menu items
+$("a").on("click", function () {
     var datestamp = Date.now();
     database.ref().push(datestamp);
 
     var content = this.innerText;
     database.ref().push(content);
+});
+$(document).ready(function () {
+    $('.sidenav').sidenav();
 });
 

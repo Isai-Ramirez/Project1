@@ -14,7 +14,7 @@ ul li a
     padding-left: 0px;
 }
 
-i.left
+.left
 {
     margin-left: 5px;
     margin-right: 5px;
@@ -73,7 +73,9 @@ i.left
     width: 20px;
     height: 20px;
 }
-
+#trigger{
+    float: right;
+}
 @media screen and (max-width: 768px){
 
 
