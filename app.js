@@ -16,6 +16,7 @@ var config = {
   $("#submit-button").on("click", function(event) {
     event.preventDefault();
 
+   var queryURL;
    var search = $("#search").val().trim();
    var datestamp = Date.now();
    console.log(search);
@@ -23,6 +24,11 @@ var config = {
 
    database.ref().push(datestamp);
    database.ref().push(search);
+
+   $.ajax({
+       url: queryURL,
+       method: "GET"
+   })
 
 
   });
@@ -51,4 +57,3 @@ var config = {
     var content = this.innerText;
     database.ref().push(content);
 });
-

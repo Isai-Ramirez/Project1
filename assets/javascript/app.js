@@ -10,8 +10,12 @@ var config = {
   };
   firebase.initializeApp(config);
 
+
+  
+
   var database = firebase.database();
 
+  
   //on click function on search button
   $("#submit-button").on("click", function(event) {
     event.preventDefault();
@@ -30,9 +34,11 @@ var config = {
       console.log(childSnapshot.val());
 
       var search = childSnapshot.val();
+      
 
 
   });
+   
 // monitoring clicks and time clicked for facebook link
   $("#facebook").on("click", function(){
       var datestamp = Date.now();
@@ -50,4 +56,6 @@ var config = {
     var content = this.innerText;
     database.ref().push(content);
 });
+
+
 
