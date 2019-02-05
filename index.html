@@ -21,47 +21,40 @@
   <!--NavBar -->
   <nav>
     <div class="nav-wrapper">
-      <a href="#" id="title" class="brand-logo center">Digital FootPrint</a>
+      <a href="index.html" class="brand-logo center">Digital FootPrint</a>
       <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#" id="home"><i class="material-icons left">home</i>Home</a></li>
-        <li><a href="#" id="account"><i class="material-icons left">account_circle</i>Name</a></li>
-        <li><a href="#" id="address"><i class="material-icons left">location_city</i>Address</a></li>
-        <li><a href="#" id="phone"><i class="material-icons left">phone</i>Phone</a></li>
-        <li><a href="#" id="email"><i class="material-icons left">email</i>email</a></li>
+        <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+        <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
+        <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
+        <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
+        <li><a href="email.html"><i class="material-icons left">email</i>Email</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- top half card + model + background image -->
   <div class="row">
-    <img id="homepageBackground" src="assets/images/digitalfootprint_homepage_background.jpg" alt="background">
+    <img id="homepageBackground" src="assets/images/digitalfootprint_homepage_background.jpg" alt="Background">
     <div class="container">
       <div class="col s12 m6" id="homeCard">
         <div class="card blue-grey">
           <div class="card-content white-text">
             <span class="card-title">Gathered Information</span>
             <p>Ever Wonder what information is stored in your Digital FootPrint?</p>
-            <p>This Website is to show you how much infomation other websites gather and what information
-              they may
+            <p>This Website is to show you how much infomation other websites gather and what information they may
               already have on you.</p>
           </div>
 
-          <!-- button for model -->
-          <div class="card-action">
-            <a href="#">What's a Digital FootPrint?</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
 
   <!-- Bottom half -->
   <div class="container">
     <div class="row">
       <h4>Your Data</h4>
       <p>Click the button below to view the data this website has on you.</p>
-      <button type="button" class="btn">Show Data</button>
+      <button type="button" class="btn"id="search">Show Data</button>
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://abiggers.github.io/Project1/" target="_blank"><img
           src="https://facebookbrand.com/wp-content/themes/fb-branding/assets/images/fb-logo.png" id="share_button"></a>
     </div>
@@ -73,6 +66,9 @@
         <h4>Put other ip stuff here with shadow effect behind.</h4>
       </div>
     </div>
+  </div>
+  <div class="progress hide" id="status-bar" >
+      <div class="indeterminate"></div>
   </div>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
