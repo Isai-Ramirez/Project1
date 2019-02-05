@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital FootPrint</title>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!--NavBar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo center">Digital FootPrint</a>
+            <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
+                <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
+                <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
+                <li><a href="email.html"><i class="material-icons left">email</i>Email</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- top half card + background image -->
+    <div class="row">
+        <img id="homepageBackground" src="assets/images/digital_footprint_address.jpg" alt="background">
+        <div class="container">
+            <div class="col s12 m6" id="homeCard">
+                <div class="card blue-grey" id="Card">
+                    <div class="card-content white-text">
+                        <span class="card-title">Your Address</span>
+                        <p>You're Shopping online, useing navigation(GPS) and submit applications online all which
+                            require
+                            you to input your home address or some address. </p>
+                        <p>Do companies have more information on you knowing your location?</p>
+                        <p>Input an address below and search what data is out there useing with your address.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom half  name form -->
+    <div class="container">
+        <div class="row" id="name_form">
+            <h4> Address</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">location_city</i>
+                        <input id="address" type="text" class="validate" required pattern="^[a-zA-Z0-9 ]+$">
+                        <label for="address">Address</label>
+                        <span class="helper-text" data-error="Please Enter a valid Address" data-success="Valid"></span>
+                        <br>
+                        <button class="btn" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <!-- put results here -->
+        <h4>Put results here</h4>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
