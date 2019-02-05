@@ -28,6 +28,7 @@ ul li a
 }
 #footprint{
     padding-right: 5px;
+    align-self: center;
 }
 
 #homepageBackground
@@ -88,5 +89,26 @@ ul li a
 #homeCard{
     position: absolute;
 }
+#logo{
+    height: 40px;
+    width: 160px;
+}
+}
 
+
+@media screen and (max-width: 1260px){
+    ul li a{
+        font-size: 10px;
+        width: 110px;
+    }
+    #footprint{
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-width: 1200){
+    ul li a{
+        font-size: 10px;
+        width: 60px;
+    }
 }
