@@ -18,12 +18,13 @@
 </head>
 
 <body>
+
     <!--NavBar -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center" id="footprint">Digital FootPrint</a>
+            <a href="index.html" class="brand-logo center" id="footprint">Digital FootPrint</a>
             <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
-            <a href="index.html" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
                 <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
@@ -41,55 +42,52 @@
         </div>
     </nav>
 
-    <!-- top half card + model + background image -->
-    <div class="container-fluid" id="card">
+    <!-- top half card + background image -->
+    <div class="container-fluid" id="card-phone">
         <div class="row">
             <div class="col s12 m6">
                 <div class="card blue-grey" id="homeCard">
                     <div class="card-content white-text">
-                        <span class="card-title">Gathered Information</span>
-                        <p>Ever Wonder what information is stored in your Digital FootPrint?</p>
-                        <p>This Website is to show you how much infomation other websites gather and what information
-                            they may
-                            already have on you.</p>
-                    </div>
-
-                    <!-- button for model -->
-                    <div class="card-action">
-                        <a href="#">What's a Digital FootPrint?</a>
+                        <span class="card-title">Your Phone Number</span>
+                        <p>You're filling out forms, texting and submiting applications for calls back in order to reach someone you give them your phone number.</p>
+                        <p>Do companies have more information on your phone number because it is easily avalible to others?</p>
+                        <p>Input your phone number bellow and search what data is out there using your phone number.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bottom half -->
+    <!-- bottom half  name form -->
     <div class="container">
-        <div class="row">
-            <h4>Your Data</h4>
-            <p>Click the button below to view the data this website has on you.</p>
-            <button type="button" class="btn">Show Data</button>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://abiggers.github.io/Project1/" target="_blank"><img
-                    src="https://facebookbrand.com/wp-content/themes/fb-branding/assets/images/fb-logo.png" id="share_button"></a>
+        <div class="row" id="name_form">
+            <h4>Phone Number</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="phone" type="text" class="validate" required pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]?\d{4}$">
+                        <!-- track phone number in ###-###-#### -->
+                        <label for="phone">Phone Number</label>
+                        <span class="helper-text" data-error="Please Enter a valid Phone Number Ex: ###-###-####"
+                            data-success="Valid"></span>
+                        <br>
+                        <button class="btn" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
         </div>
-        <div class="row">
-            <div class="col s6">
-                <h4>Put IP locator Here with shadow effect behind.</h4>
-            </div>
-            <div class="col s6">
-                <h4>Put other ip stuff here with shadow effect behind.</h4>
-            </div>
-        </div>
+        <!-- put results here -->
+        <h4>Put results here</h4>
     </div>
+
     <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <!-- <script src="app.js"></script> -->
 </body>
-
 
 </html>

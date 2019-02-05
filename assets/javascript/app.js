@@ -50,4 +50,8 @@ var config = {
     var content = this.innerText;
     database.ref().push(content);
 });
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+});
+
 

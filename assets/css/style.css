@@ -10,11 +10,11 @@ body
 
 ul li a
 {
-    font-size: 20px;
-    padding-left: 0px;
+    font-size: 15px;
+    padding-left: 5px;
 }
 
-i.left
+.left
 {
     margin-left: 5px;
     margin-right: 5px;
@@ -26,19 +26,39 @@ i.left
     height: 60px;
     width: 180px;
 }
+#footprint{
+    padding-right: 5px;
+    align-self: center;
+}
 
-#homepageBackground
-{
-    width: 100%;
+#card{
+    background-image: url(../images/digitalfootprint_homepage_background.jpg);
+    background-size: 100%;
+
+}
+#card-name{
+    background-image: url(../images/digital_FootPrint2.jpeg);
+    background-size: 100%;
+
+}#card-address{
+    background-image: url(../images/digital_footprint_address.jpg);
+    background-size: 100%;
+
+}#card-phone{
+    background-image: url(../images/digital_footprint_phone.jpg);
+    background-size: 100%;
+
+}#card-email{
+    background-image: url(../images/digital_footprint_email.jpeg);
     height: 300px;
 }
 
 #homeCard
-{
-    position: absolute;
-    top: 70px;
-    left: 515px;
-    width: 500px;
+{ 
+    position: relative;
+    left: 60%;
+    width: 70%;
+   
 }
 
 #nameCard
@@ -52,7 +72,7 @@ i.left
 
 .white-text
 {
-    width: 490px;  
+    width: 90%;  
 }
 
 .input-field
@@ -73,8 +93,33 @@ i.left
     width: 20px;
     height: 20px;
 }
-
-@media screen and (max-width: 768px){
-
-
+#trigger{
+    float: right;
 }
+@media screen and (max-width: 768px){
+#homeCard{
+    position: absolute;
+}
+#logo{
+    height: 40px;
+    width: 160px;
+}
+}
+
+
+@media screen and (max-width: 1260px){
+    ul li a{
+        font-size: 10px;
+        width: 110px;
+    }
+    #footprint{
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-width: 1200px){
+    ul li a{
+       scale: 0.15;
+    }
+}
+
