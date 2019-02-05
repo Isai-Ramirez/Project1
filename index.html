@@ -7,45 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Digital FootPrint</title>
 
-  <!-- Firebase Reference -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>  
-  <!--NavBar -->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo center">Digital FootPrint</a>
-      <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
-        <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
-        <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
-        <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
-        <li><a href="email.html"><i class="material-icons left">email</i>Email</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- top half card + model + background image -->
-  <div class="row">
-    <img id="homepageBackground" src="assets/images/digitalfootprint_homepage_background.jpg" alt="Background">
-    <div class="container">
-      <div class="col s12 m6" id="homeCard">
-        <div class="card blue-grey">
-          <div class="card-content white-text">
-            <span class="card-title">Gathered Information</span>
-            <p>Ever Wonder what information is stored in your Digital FootPrint?</p>
-            <p>This Website is to show you how much infomation other websites gather and what information they may
-              already have on you.</p>
-          </div>
-
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 
@@ -60,10 +21,18 @@
     <!--NavBar -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Digital FootPrint</a>
+            <a href="#" class="brand-logo center" id="footprint">Digital FootPrint</a>
             <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="i#"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="#"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="#"><i class="material-icons left">account_circle</i>Name</a></li>
+                <li><a href="#"><i class="material-icons left">location_city</i>Address</a></li>
+                <li><a href="#"><i class="material-icons left">phone</i>Phone</a></li>
+                <li><a href="#"><i class="material-icons left">email</i>email</a></li>
+            </ul>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="#"><i class="material-icons left">home</i>Home</a></li>
                 <li><a href="#"><i class="material-icons left">account_circle</i>Name</a></li>
                 <li><a href="#"><i class="material-icons left">location_city</i>Address</a></li>
                 <li><a href="#"><i class="material-icons left">phone</i>Phone</a></li>
@@ -73,11 +42,10 @@
     </nav>
 
     <!-- top half card + model + background image -->
-    <div class="row">
-        <img id="homepageBackground" src="assets/images/digitalfootprint_homepage_background.jpg" alt="background">
-        <div class="container">
-            <div class="col s12 m6" id="homeCard">
-                <div class="card blue-grey">
+    <div class="container-fluid" id="card">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey" id="homeCard">
                     <div class="card-content white-text">
                         <span class="card-title">Gathered Information</span>
                         <p>Ever Wonder what information is stored in your Digital FootPrint?</p>
@@ -85,6 +53,7 @@
                             they may
                             already have on you.</p>
                     </div>
+
                     <!-- button for model -->
                     <div class="card-action">
                         <a href="#">What's a Digital FootPrint?</a>
@@ -113,12 +82,14 @@
         </div>
     </div>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- <script src="app.js"></script> -->
 </body>
-<script src="app.js"></script>
+
 
 </html>
