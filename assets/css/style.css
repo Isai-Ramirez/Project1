@@ -1,16 +1,12 @@
-/* backbround color for webpage */
 body
 {
     background-color: #e1e1e1;
 }
 
-/* background color for navbar */
 .nav-wrapper
 {
     background-color: #3661A2;
 }
-
-/* size and spacing for navbar list elements */
 
 ul li a
 {
@@ -18,7 +14,6 @@ ul li a
     padding-left: 5px;
 }
 
-/* space between the webpage nav links */
 .left
 {
     margin-left: 5px;
@@ -26,30 +21,46 @@ ul li a
 }
 
 
-/* logo image */
 #logo
 {
     height: 60px;
     width: 180px;
 }
+#footprint{
+    padding-right: 5px;
+    align-self: center;
+}
 
-/* background image for homepage */
-#homepageBackground
-{
-    width: 100%;
+#card{
+    background-image: url(../images/digitalfootprint_homepage_background.jpg);
+    background-size: 100%;
+
+}
+#card-name{
+    background-image: url(../images/digital_footprint2.jpeg);
+    background-size: 100%;
+
+}#card-address{
+    background-image: url(../images/digital_footprint_address.jpg);
+    background-size: 100%;
+
+}#card-phone{
+    background-image: url(../images/digital_footprint_phone.jpg);
+    background-size: 100%;
+
+}#card-email{
+    background-image: url(../images/digital_footprint_email.jpeg);
     height: 300px;
 }
 
-/* card on homepage image */
 #homeCard
-{
-    position: absolute;
-    top: 70px;
-    left: 515px;
-    width: 500px;
+{ 
+    position: relative;
+    left: 60%;
+    width: 70%;
+   
 }
 
-/* card on name page */
 #nameCard
 {
     position: absolute;
@@ -59,89 +70,59 @@ ul li a
     
 }
 
-/* text size on cards */
 .white-text
 {
     width: 90%;  
 }
 
-
-/* cards background color */
-.blue-grey
+.input-field
 {
-    background-color: rgba(96, 125, 139, 1) !important;
-} 
-
-/* cards opacity */
-#Card
-{
+<<<<<<< HEAD
     background-size: 100%;
     background-color: rgba(96, 125, 139, 0.8) !important;
+=======
+    display: inline-block;
+>>>>>>> 525722dac82251d4fb482bf47ca220960de8feed
 }
 
-/* label color */
-.input-field label 
+#form
 {
-    color: #000;
+    position: absolute;
+    left: 23px;
+    top: 290px;
+    width: 455px;
 }
 
-/* label focus color */
-.input-field input[type=text]:focus + label.active 
-{
-    color: rgb(255, 255, 255);
+
+#share_button {
+    width: 20px;
+    height: 20px;
+}
+#trigger{
+    float: right;
+}
+@media screen and (max-width: 768px){
+#homeCard{
+    position: absolute;
+}
+#logo{
+    height: 40px;
+    width: 160px;
+}
 }
 
-/* label underline focus color */
-.input-field input[type=text]:focus
-{
-    color: white;
-    border-bottom: 1px solid white !important;
-    box-shadow: 0 1px 0 0 white !important;
-}
 
-/* icon prefix focus color */
-.input-field .prefix.active 
-{
-    color: rgb(255, 255, 255);
-}
-
-/* label focus color */
-.input-field input[type=email]:focus + label.active 
-{
-    color: rgb(255, 255, 255);
-}
-
-/* label underline focus color */
-.input-field input[type=email]:focus
-{
-    color: white;
-    border-bottom: 1px solid white !important;
-    box-shadow: 0 1px 0 0 white !important;
-}
-
-/* background for the form to input your name */
-#name_form
-{
-    background-color: rgba(96, 125, 139, 1);
-}
-
-/* agustment for the "Your Name" title */
-h4
-{
-    position: relative;
-    left: 20px;
-}
-
-.container
-{
-    background-color: rgba(96, 125, 139, 1);
-}
-
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1260px){
     ul li a{
         font-size: 10px;
+        width: 110px;
     }
+    #footprint{
+        font-size: 14px;
+    }
+    
 }
+<<<<<<< HEAD
 .progress
 {
     margin-left:20%;
@@ -153,3 +134,11 @@ h4
 .hide{
     display: none;
 }
+=======
+@media screen and (max-width: 1200px){
+    ul li a{
+       scale: 0.15;
+    }
+}
+
+>>>>>>> 525722dac82251d4fb482bf47ca220960de8feed

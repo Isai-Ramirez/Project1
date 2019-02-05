@@ -81,6 +81,16 @@ $("#submit-button").on("click", function (event) {
 
         var search = childSnapshot.val();
 
+<<<<<<< HEAD
+=======
+    var content = this.innerText;
+    database.ref().push(content);
+});
+$(document).ready(function () {
+    $('.sidenav').sidenav();
+});
+
+>>>>>>> 525722dac82251d4fb482bf47ca220960de8feed
 
     });
 

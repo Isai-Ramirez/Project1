@@ -22,35 +22,42 @@
     <!--NavBar -->
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo center">Digital FootPrint</a>
+            <a href="index.html" class="brand-logo center" id="footprint">Digital FootPrint</a>
             <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
                 <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
                 <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
                 <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
-                <li><a href="email.html"><i class="material-icons left">email</i>Email</a></li>
+                <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
+            </ul>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
+                <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
+                <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
+                <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- top half card + background image -->
-    <div class="row">
-        <img id="homepageBackground" src="assets/images/digital_footprint_name.jpeg" alt="background">
-        <div class="container">
-            <div class="col s12 m6" id="homeCard">
-                <div class="card blue-grey" id="Card">
+    <div class="container-fluid" id="card">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey" id="homeCard">
                     <div class="card-content white-text">
                         <span class="card-title">Your Name</span>
-                        <p>You fillout forms, register for accounts and submit applications online all which require
-                            you to input your name.</p>
-                        <p>But what infomation do companies have on you with just your name?</p>
-                        <p>Input your name below and search what data is out there with your name as a search.</p>
+                        <p>You fillout forms, register for accounts and submit applications online all which require you to input your name.</p>
+                        <p>But what information do companies have on you with just your name?</p>
+                        <p>Input your name bellow and search what data is out there with your name as a search.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- bottom half  name form -->
     <div class="container">
@@ -78,9 +85,9 @@
         <!-- put results here -->
         <h4>Put results here</h4>
     </div>
-    <div class="progress" id="hide">
-            <div class="indeterminate"></div>
-        </div>
+    <div class="progress hide" id="status-bar" >
+        <div class="indeterminate"></div>
+    </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
