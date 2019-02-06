@@ -21,31 +21,32 @@
     <!--NavBar -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center" id="footprint">Digital FootPrint</a>
+            <a href="index.html" class="brand-logo center" id="footprint">Digital Footprint</a>
             <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
+            <a href="index.html" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#"><i class="material-icons left">home</i>Home</a></li>
-                <li><a href="#"><i class="material-icons left">account_circle</i>Name</a></li>
-                <li><a href="#"><i class="material-icons left">location_city</i>Address</a></li>
-                <li><a href="#"><i class="material-icons left">phone</i>Phone</a></li>
-                <li><a href="#"><i class="material-icons left">email</i>email</a></li>
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
+                <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
+                <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
+                <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
             </ul>
             <ul class="sidenav" id="mobile-demo">
-                <li><a href="#"><i class="material-icons left">home</i>Home</a></li>
-                <li><a href="#"><i class="material-icons left">account_circle</i>Name</a></li>
-                <li><a href="#"><i class="material-icons left">location_city</i>Address</a></li>
-                <li><a href="#"><i class="material-icons left">phone</i>Phone</a></li>
-                <li><a href="#"><i class="material-icons left">email</i>email</a></li>
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
+                <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
+                <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
+                <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
             </ul>
         </div>
     </nav>
+
 
     <!-- top half card + model + background image -->
     <div class="container-fluid" id="card">
         <div class="row">
             <div class="col s12 m6">
-                <div class="card blue-grey" id="homeCard">
+                <div class="card blue-grey" id="topcard">
                     <div class="card-content white-text">
                         <span class="card-title">Gathered Information</span>
                         <p>Ever Wonder what information is stored in your Digital FootPrint?</p>
@@ -56,19 +57,56 @@
 
                     <!-- button for model -->
                     <div class="card-action">
-                        <a href="#">What's a Digital FootPrint?</a>
+                        <a class="modal-trigger" href="#whatismodal">What's a Digital FootPrint?</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- model body -->
+    <div id="whatismodal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="modal-close btn-flat">X</button>
+                <h4 class="center">What's a Digital Footprint?</h4>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>According to the Webster Dictionary a digital footprint is "the information about a particular
+                        person that exists on the Internet as a result of their online activity."</p>
+                    <p>There are two main classifications of a digital footprint:</p>
+                    <ul>
+                        <li>Passive: Where data is collected without the owner knowing. <br> This has started many
+                            debates about online privacy among the user.</li>
+                        <br>
+                        <li>Active: Where personal data is released intentionally by a user for the purpose of sharing
+                            information about oneself by means of websites or social media.</li>
+                    </ul>
+                    <p>The data collected from the use wheather passively or actively is stored in large databases.
+                        Many times your data is sold to other companies that use that data to market items for you to
+                        buy.</p>
+
+                    <p>There is an upside for companies to gather this data. On many websites it is used to filter
+                        content that you would find uninteresting, boring and recommend content that you would enjoy.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/6EHSlhnE6Ck"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Bottom half -->
-    <div class="container">
+    <div class="container" id="ip_data">
         <div class="row">
-            <h4>Your Data</h4>
-            <p>Click the button below to view the data this website has on you.</p>
-            <button type="button" class="btn">Show Data</button>
+            <h4 class="align">Your Data</h4>
+            <p class="align">Click the button below to view the data this website has on you.</p>
+            <button type="button" class="btn waves-effect">Show Data</button>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://abiggers.github.io/Project1/" target="_blank"><img
                     src="https://facebookbrand.com/wp-content/themes/fb-branding/assets/images/fb-logo.png" id="share_button"></a>
         </div>
@@ -77,7 +115,7 @@
                 <h4>Put IP locator Here with shadow effect behind.</h4>
             </div>
             <div class="col s6">
-                <h4>Put other ip stuff here with shadow effect behind.</h4>
+                <h4>Put other IP stuff here with shadow effect behind.</h4>
             </div>
         </div>
     </div>
@@ -86,9 +124,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <!-- <script src="app.js"></script> -->
 </body>
 
 

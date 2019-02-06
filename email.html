@@ -19,40 +19,39 @@
 
 <body>
 
-   <!--NavBar -->
-   <nav>
-    <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo center" id="footprint">Digital FootPrint</a>
-        <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
-            <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
-            <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
-            <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
-            <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
-        </ul>
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
-            <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
-            <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
-            <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
-            <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
-        </ul>
-    </div>
-</nav>
+    <!--NavBar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo center" id="footprint">Digital FootPrint</a>
+            <a class="brand-logo left"><img id="logo" src="assets/images/digitalfootprint_logo.png" alt="Logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger" id="trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
+                <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
+                <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
+                <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
+            </ul>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="name.html"><i class="material-icons left">account_circle</i>Name</a></li>
+                <li><a href="address.html"><i class="material-icons left">location_city</i>Address</a></li>
+                <li><a href="phone.html"><i class="material-icons left">phone</i>Phone</a></li>
+                <li><a href="email.html"><i class="material-icons left">email</i>email</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- top half card + background image -->
-    <div class="row">
-        <img id="homepageBackground" src="assets/images/digital_footprint_email.jpeg" alt="background">
-        <div class="container">
-            <div class="col s12 m6" id="homeCard">
-                <div class="card blue-grey" id="Card">
+    <div class="container-fluid" id="card-email">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey" id="topcard">
                     <div class="card-content white-text">
                         <span class="card-title">Your Email</span>
-                        <p>You're filling out forms, register for accounts, submiting applications and signing up for priae drawings </p>
-                        <p>Companies surely must have a lot of infomation on how you use their service, but how much data do other companies have on you?</p>
-                        <p>Input your email below and search what infomation is out there with your eamil address.</p>
+                        <p>You're filling out forms, reigister for accounts, submitting applications, and signing up for prize drawings.</p>
+                        <p>Companies surely have lots of information on how you use their services, but how much datat do they ahve on you?</p>
+                        <p>Input your email bellow and find out what information there is on your email.</p>
                     </div>
                 </div>
             </div>
@@ -61,17 +60,17 @@
 
     <!-- bottom half  name form -->
     <div class="container">
-        <div class="row" id="name_form">
-            <h4>Email</h4>
-            <form class="col s12">
+        <div class="row" id="form_background">
+            <h4 class="align">Email</h4>
+            <form class="col s12 button-pulse">
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">email</i>
                         <input id="email" type="email" class="validate" required>
-                        <label for="email">Email</label>
-                        <span class="helper-text" data-error="Please Enter a valid Email Address" data-success="Valid"></span>
+                        <label id="email_label" for="email">Email</label>
+                        <span class="helper-text" data-error="Please Enter a valid Email Address Ex: johnsmith@jamestown.com" data-success="Valid"></span>
                         <br>
-                        <button class="btn" type="submit" name="action">Submit
+                        <button class="btn waves-effect" type="submit" id="submit-button" name="action">Submit
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
@@ -79,12 +78,16 @@
         </div>
         <!-- put results here -->
         <h4>Put results here</h4>
+        <div class="progress hide" id="status-bar">
+            <div class="indeterminate"></div>
+        </div>
     </div>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
