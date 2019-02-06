@@ -1,36 +1,46 @@
 
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyCPXKI0iPhjsRW1lbxJOgkOo6NNmiXp-3s",
-    authDomain: "digital-footprint-1999d.firebaseapp.com",
-    databaseURL: "https://digital-footprint-1999d.firebaseio.com",
-    projectId: "digital-footprint-1999d",
-    storageBucket: "",
-    messagingSenderId: "820087665716"
-};
-firebase.initializeApp(config);
+$(document).ready(function () 
+{
+    
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCPXKI0iPhjsRW1lbxJOgkOo6NNmiXp-3s",
+        authDomain: "digital-footprint-1999d.firebaseapp.com",
+        databaseURL: "https://digital-footprint-1999d.firebaseio.com",
+        projectId: "digital-footprint-1999d",
+        storageBucket: "",
+        messagingSenderId: "820087665716"
+    };
+    
+    firebase.initializeApp(config);
+    
+    var database = firebase.database();
 
-var database = firebase.database();
- $(document).ready(function () {
-   
-  
-
-//on click function on search button
-$("#submit-button").on("click", function (event) {
+    //on click function on search button
+    $("#submit-button").on("click", function (event) {
     event.preventDefault();
-
-    var queryURL = "http://ip-api.com/json/";
-    var secondQuery;
-    var search = $(".validate").val().trim();
-    var datestamp = Date.now();
-   
+    
+    var search = $(".validate").val();
     console.log(search);
     console.log("Submit");
+    $(".validate").val("");
+    $("#first_name").removeClass("valid");
+    $("#last_name").removeClass("valid");
+    $("#firstname_label").removeClass("active");
+    $("#lastname_label").removeClass("active");
+    
+    $("#address").removeClass("valid");
+    $("#address_label").removeClass("active");
 
-    database.ref().push(datestamp);
-    database.ref().push(search);
+    $("#phone").removeClass("valid");
+    $("#phone_label").removeClass("active");
+
+    $("#email").removeClass("valid");
+    $("#email_label").removeClass("active");
     
 
+    
+    database.ref().push(search);
 
     var timer = 15;
     var myInterval;
@@ -49,53 +59,47 @@ $("#submit-button").on("click", function (event) {
         $("#status-bar").addClass("hide");
     }
     
-
-
     
+});
 
-
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-        $("#query").append("ISP: " + response)
-        $("#city").append("City: " + response)
-        $("#country").append("Country: " + response)
-        $("#isp").append("ISP: " + response)
-        $("#zip").append("Zip: " + response)
-
-
-
-    });
-
-    $.ajax({
-        url: secondQuery,
-        method: "GET"
-    }).then(function (response) {
-
-        $("#first").append("First Name: " + response)
-        $("#last").append("Last Name: " + response)
-    })
-
+// storing child info
+database.ref().on("child_added", function (childSnapshot) {
+    console.log(childSnapshot.val());
     
+    var search = childSnapshot.val();
+    
+    
+});
 
+// monitoring clicks and time clicked for facebook link
+$("#facebook").on("click", function () {
+    var datestamp = Date.now();
+    
+    database.ref().push(datestamp);
+    database.ref().push(this.id)
+});
 
-    // storing child info
-    database.ref().on("child_added", function (childSnapshot) {
-        console.log(childSnapshot.val());
+// monitoring clicks and time clicked on menu items
+$("a").on("click", function () {
+    var datestamp = Date.now();
+    database.ref().push(datestamp);
+    
+    var content = this.innerText;
+    database.ref().push(content);
+});
 
-        var search = childSnapshot.val();
-
+// side nav bar + modal
+$('.sidenav').sidenav();
+$('.modal').modal();
+});
 
         
         var content = this.innerText;
          database.ref().push(content);
-    });
 
    
 
 
-    });
 
 
     // monitoring clicks and time clicked for facebook link
@@ -165,5 +169,5 @@ $("#submit-button").on("click", function (event) {
     })
      $('.sidenav').sidenav();
      $('.modal').modal();
-  });
+  ;
 
