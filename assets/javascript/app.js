@@ -11,7 +11,9 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
-
+ $(document).ready(function () {
+   
+  
 
 //on click function on search button
 $("#submit-button").on("click", function (event) {
@@ -21,15 +23,18 @@ $("#submit-button").on("click", function (event) {
     var secondQuery;
     var search = $(".validate").val().trim();
     var datestamp = Date.now();
-    var timer = 90;
-    var myInterval;
+   
     console.log(search);
     console.log("Submit");
 
     database.ref().push(datestamp);
     database.ref().push(search);
+    
 
-    $("#status-bar").removeClass("hide");
+
+    var timer = 15;
+    var myInterval;
+    $(".progress").removeClass("hide");
 
     myInterval = setInterval(decrement, 1000);
     function decrement() {
@@ -81,16 +86,14 @@ $("#submit-button").on("click", function (event) {
 
         var search = childSnapshot.val();
 
-<<<<<<< HEAD
-=======
-    var content = this.innerText;
-    database.ref().push(content);
-});
-$(document).ready(function () {
-    $('.sidenav').sidenav();
-});
 
->>>>>>> 525722dac82251d4fb482bf47ca220960de8feed
+        
+        var content = this.innerText;
+         database.ref().push(content);
+    });
+
+   
+
 
     });
 
@@ -160,6 +163,7 @@ $(document).ready(function () {
         var content = this.innerText;
         database.ref().push(content);
     })
+     $('.sidenav').sidenav();
+     $('.modal').modal();
+  });
 
-
-});

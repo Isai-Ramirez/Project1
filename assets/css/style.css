@@ -77,12 +77,7 @@ ul li a
 
 .input-field
 {
-<<<<<<< HEAD
-    background-size: 100%;
-    background-color: rgba(96, 125, 139, 0.8) !important;
-=======
     display: inline-block;
->>>>>>> 525722dac82251d4fb482bf47ca220960de8feed
 }
 
 #form
@@ -122,7 +117,6 @@ ul li a
     }
     
 }
-<<<<<<< HEAD
 .progress
 {
     margin-left:20%;
@@ -134,11 +128,9 @@ ul li a
 .hide{
     display: none;
 }
-=======
 @media screen and (max-width: 1200px){
     ul li a{
        scale: 0.15;
     }
 }
 
->>>>>>> 525722dac82251d4fb482bf47ca220960de8feed
