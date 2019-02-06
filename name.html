@@ -43,10 +43,10 @@
     </nav>
 
     <!-- top half card + background image -->
-    <div class="container-fluid" id="card">
+    <div class="container-fluid" id="card-name">
         <div class="row">
             <div class="col s12 m6">
-                <div class="card blue-grey" id="homeCard">
+                <div class="card blue-grey" id="topcard">
                     <div class="card-content white-text">
                         <span class="card-title">Your Name</span>
                         <p>You fillout forms, register for accounts and submit applications online all which require you to input your name.</p>
@@ -61,35 +61,39 @@
 
     <!-- bottom half  name form -->
     <div class="container">
-        <div class="row" id="name_form">
-            <h4>Name</h4>
+        <div class="row" id="form_background">
+            <h4 class="align">Name</h4>
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="first_name" type="text" class="validate" required pattern="^[a-zA-Z]+$">
-                        <label for="first_name">First Name</label>
-                        <span class="helper-text" data-error="Please Enter a valid First Name" data-success="Valid"></span>
+                        <label id="firstname_label"for="first_name">First Name</label>
+                        <span class="helper-text" data-error="Please Enter a valid First Name Ex: John" data-success="Valid"></span>
                         <br>
-                        <button class="btn" type="submit" name="action">Submit
+                        <button class="btn waves-effect" type="submit" id="submit-button" name="action">Submit
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
                     <div class="input-field col s6">
                         <input id="last_name" type="text" class="validate" required pattern="^[a-zA-Z]+$">
-                        <label for="last_name">Last Name</label>
-                        <span class="helper-text" data-error="Please Enter a valid Last Name" data-success="Valid"></span>
+                        <label id="lastname_label" for="last_name">Last Name</label>
+                        <span class="helper-text" data-error="Please Enter a valid Last Name Ex: Smith" data-success="Valid"></span>
                     </div>
                 </div>
         </div>
         <!-- put results here -->
         <h4>Put results here</h4>
+        <div class="progress hide" id="status-bar">
+            <div class="indeterminate"></div>
+        </div>
     </div>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
