@@ -93,3 +93,81 @@ $('.sidenav').sidenav();
 $('.modal').modal();
 });
 
+        
+        var content = this.innerText;
+         database.ref().push(content);
+
+   
+
+
+
+
+    // monitoring clicks and time clicked for facebook link
+    $("#facebook").on("click", function () {
+        var datestamp = Date.now();
+
+        database.ref().push(datestamp);
+        database.ref().push(this.id)
+    });
+
+    // monitoring clicks and time clicked on menu items
+    $("#a").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    });
+    $("#home").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    });
+    $("#phone").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    });
+    $("#email").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    });
+    $("#address").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    });
+    $("#account").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    });
+    $("#title").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    });
+    $("#submit").on("click", function () {
+        var datestamp = Date.now();
+        database.ref().push(datestamp);
+
+        var content = this.innerText;
+        database.ref().push(content);
+    })
+     $('.sidenav').sidenav();
+     $('.modal').modal();
+  ;
+
