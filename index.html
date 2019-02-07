@@ -103,28 +103,31 @@
     
     <!-- Bottom half -->
     <div class="container" id="ip_data">
-        <div class="row">
-            <h4 class="align">Your Data</h4>
-            <p class="align">Click the button below to view the data this website has on you.</p>
-            <button type="button" class="btn waves-effect">Show Data</button>
+        <div class="row" id="dataprompt">
+            <h2 class="align">Your Data</h2>
+            <p class="align"><h4>Click the button below to view the data this website has on you.</h4></p>
+            <button type="button" class="btn waves-effect" id="showdatabutton">Show Data</button>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://abiggers.github.io/Project1/" target="_blank"><img
                     src="https://facebookbrand.com/wp-content/themes/fb-branding/assets/images/fb-logo.png" id="share_button"></a>
         </div>
         <div class="row">
             <div class="col s6">
-                <h4>Put IP locator Here with shadow effect behind.</h4>
+                <div class="card" id="ipinfo">IP STUFF</div>
             </div>
             <div class="col s6">
-                <h4>Put other IP stuff here with shadow effect behind.</h4>
+                <div class="card" id="browserleak">BROWSER LEAKAGE</div>
             </div>
         </div>
     </div>
+    
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/ip.js"></script>
+    <script type="text/javascript" src="assets/javascript/platform.js"></script>
 </body>
 
 

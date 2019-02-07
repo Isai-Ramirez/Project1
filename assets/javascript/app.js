@@ -51,6 +51,7 @@ $(document).ready(function ()
         timer--;
         if (timer === 0){
             stop();
+            $("#resultsframe").append('<center><iframe src="https://drive.google.com/file/d/1pGe2VVjRpBzDA5SDcJzasy9g9E2Khm4h/preview" width="800" height="480"></iframe><center>')
         }
     }
 
