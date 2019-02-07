@@ -314,3 +314,10 @@ ul li a
     }
 } 
 
+#ipinfo {
+    display: none;
+}
+
+#browserleak {
+    display: none;
+}
