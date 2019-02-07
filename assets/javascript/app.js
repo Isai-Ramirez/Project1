@@ -91,6 +91,51 @@ $("a").on("click", function () {
 // side nav bar + modal
 $('.sidenav').sidenav();
 $('.modal').modal();
+
+$(document).on("click", function()
+{
+    switch ($("#address").attr("class"))
+    {
+        case "validate valid":
+            $("#submit-button").addClass("pulse");
+        break;
+    
+        case "validate invalid":
+            $("#submit-button").removeClass("pulse");
+        break;
+    }
+    
+    switch ($("#phone").attr("class"))
+    {
+        case "validate valid":
+            $("#submit-button").addClass("pulse");
+        break;
+    
+        case "validate invalid":
+            $("#submit-button").removeClass("pulse");
+        break;
+    }
+
+    switch ($("#email").attr("class"))
+    {
+        case "validate valid":
+            $("#submit-button").addClass("pulse");
+        break;
+    
+        case "validate invalid":
+            $("#submit-button").removeClass("pulse");
+        break;
+    }
+
+    if($("#first_name").attr("class") == "validate valid" && $("#last_name").attr("class") == "validate valid")
+    {
+        $("#submit-button").addClass("pulse");
+    }
+    else if($("#first_name").attr("class") == "validate invalid" || $("#last_name").attr("class") == "validate invalid")
+    {
+        $("#submit-button").removeClass("pulse");
+    }
+});
 });
 
         

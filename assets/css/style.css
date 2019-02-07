@@ -127,10 +127,22 @@ ul li a
 }
 
 /* share button */
-#share_button 
+#share_button_fb 
 {
-    width: 20px;
-    height: 20px;
+    position: absolute;
+    top: 460px;
+    left: 190px;
+    width: 35px;
+    height: 32px;
+}
+
+#share_button_tw 
+{
+    position: absolute;
+    top: 461px;
+    left: 230px;
+    width: 30px;
+    height: 30px;
 }
 
 /* mobile side bar nav lines */
